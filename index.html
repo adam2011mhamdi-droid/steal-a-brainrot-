@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Steal a Brainrot — Fan Game</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Jeu Roblox - Steal a Brainrot (fan project). Rejoins, vois le leaderboard et la boutique." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Steal a Brainrot — Fan Game</h1>
+      <nav>
+        <a href="#play" class="btn">Jouer</a>
+        <a href="#shop" class="btn ghost">Boutique</a>
+        <a href="#leaderboard" class="btn ghost">Leaderboard</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="hero" class="hero">
+      <div class="hero-left">
+        <h2>Vole des cerveaux. Renaître. Devient le meilleur.</h2>
+        <p>Prototype web pour accompagner ton expérience Roblox. Clique sur « Jouer » pour ouvrir la page du jeu Roblox.</p>
+        <div class="hero-actions">
+          <!-- Remplace GAME_ID par l'ID réel du jeu Roblox -->
+          <a id="playButton" class="btn large" target="_blank" rel="noopener">Jouer sur Roblox</a>
+          <button id="joinDiscord" class="btn ghost">Rejoindre le Discord</button>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="card preview">
+          <h3>Aperçu</h3>
+          <p id="previewText">Collecte des cerveaux, vol, rebirths et boutique.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="shop" class="section">
+      <h2>Boutique</h2>
+      <p>Achète des skins et des objets pour ta base (simulation web).</p>
+      <div id="shopItems" class="grid">
+        <!-- Items injectés via JS -->
+      </div>
+    </section>
+
+    <section id="leaderboard" class="section">
+      <h2>Leaderboard (local)</h2>
+      <p>Leaderboard local simulé (pour voir l’UI). Les scores Roblox réels demandent l'API/serveur.</p>
+      <div class="card">
+        <ol id="leaderList"></ol>
+        <form id="fakeScoreForm" class="inline-form">
+          <input id="playerName" placeholder="Pseudo" required />
+          <input id="playerScore" placeholder="Score" type="number" required />
+          <button type="submit" class="btn">Ajouter</button>
+        </form>
+        <button id="clearLeaderboard" class="btn ghost small">Effacer leaderboard</button>
+      </div>
+    </section>
+
+    <section id="info" class="section">
+      <h2>Instructions rapides</h2>
+      <ul>
+        <li>Remplace <code>GAME_ID</code> dans <code>script.js</code> par l’ID de ton jeu Roblox.</li>
+        <li>Héberge sur GitHub Pages / Netlify / Vercel et partage l’URL.</li>
+        <li>Pour un vrai leaderboard, il faut un serveur qui interroge ton jeu (ou DataStore via Cloud Script).</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© Ton projet — Modifie la page comme tu veux</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
